@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+@@include('./components/_head.html', {
+lang: 'en',
+title: 'Expice | Explore delicious food'
+})
+
+<body>
+    @@include('./components/_loader.html')
+    @@include('./components/_header.html')
+    <main>
+        <section class="hero" id="home">
+            <span class="border"></span>
+            <div class="container d-flex flex-wrap justify-content-end align-items-center">
+                <div class="hero_header col-12 col-lg-6">
+                    <span class="hero_header-food">Food</span>
+                    <h1 class="hero_header-title title title--bold" data-aos="fade-right" data-aos-duration="500" data-aos-delay="1000" data-aos-once="true">
+                        Discover Restaurant & Delicious Food
+                    </h1>
+                    <form class="hero_header-search d-flex" action="POST" data-aos="fade-up" data-aos-duration="500" data-aos-delay="1300" data-aos-once="true">
+                        <input class="hero_header-search_field" type="text" placeholder="search restaurant, food">
+                        <button class="hero_header-search_btn" type="submit">Go</button>
+                    </form>
+                    <span class="hero_header-label" data-aos="slide-right" data-aos-duration="500" data-aos-delay="1000" data-aos-once="true">
+                        <i class="icon-map-marker"></i>
+                        Rajshahi
+                    </span>
+                </div>
+                <div class="slider-wrapper col-12 col-sm-10 col-lg-6">
+                    <div class="helper">
+                        <ul class="hero_slider">
+                            @@include('./components/_slide.html', {i:"1"})
+                            @@include('./components/_slide.html', {i:"2"})
+                            @@include('./components/_slide.html', {i:"3"})
+                            @@include('./components/_slide.html', {i:"4"})
+                        </ul>
+                        <span class="dots"></span>
+                    </div>
+                    <div class="hero_slider-controls d-flex align-items-center justify-content-end">
+                        <a class="slider-control slider-control--prev" href="javascript:void(0)">
+                            <i class="icon-arrow_left"></i>
+                        </a>
+                        <a class="slider-control slider-control--next" href="javascript:void(0)">
+                            <i class="icon-arrow_right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="promo">
+            <div class="container">
+                <div class="promo_header d-flex flex-wrap align-items-center">
+                    <h2 class="promo_header-title title title--section decorated col-12 col-lg-8" data-aos="fade-up" data-aos-duration="500">some top restaurant
+                        for dining
+                        in or Take away!</h2>
+                    <p class="promo_header-text col-12 col-lg-4" data-aos="fade-left" data-aos-duration="500">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Est,
+                        adipiscing cursus auctor eget sed phasellus senectus. Ut
+                        tellus donec vestibulum tristique leo bibendum in a, tincidunt. Volutpat metus id amet, nam hac
+                        magna accumsan. Nascetur
+                        ac tortor purus ultrices morbi tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est, adipiscing cursus
+                        auctor eget sed.</p>
+                </div>
+                <div
+                    class="promo_content row gy-3 g-lg-2 g-xl-4 align-items-center justify-content-center justify-content-lg-between">
+                    <div class="promo_content-card col-12 col-md-6 col-lg-5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+                        <div class="promo_content-card_wrapper">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/content/pizza--sm.webp 600w,
+                                    img/content/pizza--full.webp 1200w" srcset="img/content/pizza--sm.webp 600w,
+                                    img/content/pizza--full.webp 1200w" data-sizes="100w" sizes="100w" />
+                                <img class="promo-img lazy"
+                                    data-srcset="img/content/pizza--sm.jpg 600w, img/content/pizza--full.jpg 1200w"
+                                    srcset="img/content/pizza--sm.jpg 600w,
+                                    img/content/pizza--full.jpg 1200w" data-src="img/content/pizza--sm.jpg"
+                                    src="img/content/pizza--sm.jpg" alt="Fire Water" data-sizes="100w" sizes="100w" />
+                            </picture>
+                            <div class="content">
+                                <h3 class="content_title">
+                                    Fire Water
+                                </h3>
+                                <p class="content_description">
+                                    we are all about we are all about to the fullest and all content dining out or
+                                    in! dining out or in!
+                                </p>
+                                <div class="wrapper d-flex align-items-center justify-content-between">
+                                    <span class="location d-flex align-items-center">
+                                        <i class="icon-map-marker"></i>
+                                        New Market
+                                    </span>
+                                    <a class="content_btn" href="javascript:void(0)">Book now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="dots dots--top"></span>
+                    </div>
+                    <div class="promo_content-card col-12 col-md-6 col-lg-5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
+                        <div class="promo_content-card_wrapper">
+                            <picture>
+                                <source type="image/webp" data-srcset="img/content/burger--sm.webp 600w,
+                                    img/content/burger--full.webp 1200w" srcset="img/content/burger--sm.webp 600w,
+                                    img/content/burger--full.webp 1200w" data-sizes="100w" sizes="100w" />
+                                <img class="promo-img lazy"
+                                    data-srcset="img/content/burger--sm.jpg 600w, img/content/burger--full.jpg 1200w"
+                                    srcset="img/content/burger--sm.jpg 600w,
+                                    img/content/burger--full.jpg 1200w" data-src="img/content/burger--sm.jpg"
+                                    src="img/content/pizza--sm.jpg" alt="The Wonton" data-sizes="100w" sizes="100w" />
+                            </picture>
+                            <div class="content">
+                                <h3 class="content_title">
+                                    The Wonton
+                                </h3>
+                                <p class="content_description">
+                                    we are all about we are all about to the fullest and all content dining out or
+                                    in! dining out or in!
+                                </p>
+                                <div class="wrapper d-flex align-items-center justify-content-between">
+                                    <span class="location d-flex align-items-center">
+                                        <i class="icon-map-marker"></i>
+                                        Saheb Bazar
+                                    </span>
+                                    <a class="content_btn" href="javascript:void(0)">Book now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="dots dots--bottom"></span>
+                    </div>
+                    <a class="promo_content-btn d-inline-flex flex-column align-items-center col-auto"
+                        href="javascript:void(0)">
+                        <i class="icon-arrow_right"></i>
+                        See more
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="booking" id="booking">
+            <picture>
+                <source data-srcset="img/deco/lettuce.webp" srcset="img/deco/lettuce.webp" type="image/webp">
+                <img class="lazy lettuce deco" data-src="img/deco/lettuce.png" src="img/deco/lettuce.png" alt="deco">
+            </picture>
+            <picture>
+                <source data-srcset="img/deco/salad.webp" srcset="img/deco/salad.webp" type="image/webp">
+                <img class="lazy salad deco" data-src="img/deco/salad.png" src="img/deco/salad.png" alt="deco">
+            </picture>
+            <div class="container booking_container">
+                <span class="dots dots--top"></span>
+                <span class="dots dots--bottom"></span>
+                <div class="booking_wrapper d-flex flex-column align-items-center">
+                    <h3 class="booking_title title title--section">advance booking</h3>
+                    <form class="booking_form" action="POST">
+                        <div class="d-flex booking_form-search align-items-center">
+                            <input class="booking_form-search_field" type="text" placeholder="search restaurant..."
+                                name="searchQuery" id="bookingSearchQuery">
+                            <button class="booking_form-search_btn" type="submit">Go</button>
+                        </div>
+                        <fieldset class="booking_form-group d-flex justify-content-around align-items-center">
+                            <div class="field d-flex flex-column">
+                                <label class="label" for="bookingDate">Date</label>
+                                <input class="booking-date" type="date" name="bookingDate" id="bookingDate">
+                            </div>
+                            <div class="field d-flex flex-column">
+                                <label class="label" for="bookingTime">Time</label>
+                                <input type="time" name="bookingTime" id="bookingTime" value="13:00" min="10:00"
+                                    max="23:00">
+                            </div>
+                            <div class="field d-flex flex-column">
+                                <label class="label" for="bookingSeats">Guests</label>
+                                <input type="number" name="bookingSeats" id="bookingSeats" value="1" min="1" max="25">
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="services" id="services">
+            <div class="container">
+                <div class="services_header d-flex flex-wrap justify-content-between align-items-center">
+                    <h2 class="services_header-title title title--section decorated" data-aos="fade-up" data-aos-duration="500">Our Services</h2>
+                    <p class="services_header-text col-md-5" data-aos="fade-left" data-aos-duration="500">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing cursus auctor eget sed
+                        phasellus senectus. Ut
+                        tellus donec vestibulum tristique leo bibendum in a, tincidunt. Volutpat metus id amet, nam hac
+                        magna accums.
+                    </p>
+                </div>
+                <ul class="services_list d-grid">
+                    <li class="services_list-item services_list-item--booking">
+                        <div class="wrapper d-flex align-items-center justify-content-start" data-aos="fade-left" data-aos-duration="500">
+                            <div class="img img--bg col-6">
+                                <img class="lazy" data-src="img/icons/table.svg" src="img/icons/table.svg"
+                                    alt="booking">
+                            </div>
+                            <div class="text text--right col-6">
+                                <h5 class="services-title">advanced table<span class="breakword">booking <i
+                                            class="icon-arrow_left"></i></span></h5>
+                                <span class="helper">
+                                    <p class="services-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services_list-item services_list-item--food">
+                        <div class="wrapper d-flex align-items-center justify-content-end" data-aos="fade-right" data-aos-duration="500">
+                            <div class="text text--left col-6">
+                                <h5 class="services-title">Food For Free <span class="breakword">24/7 <i
+                                            class="icon-arrow_right"></i></span></h5>
+                                <span class="helper">
+                                    <p class="services-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                    </p>
+                                </span>
+                            </div>
+                            <div class="img img--bg col-6">
+                                <img class="lazy" data-src="img/icons/food.svg" src="img/icons/food.svg" alt="food">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="services_list-item services_list-item--delivery">
+                        <div class="wrapper wrapper--big d-flex flex-column align-items-center" data-aos="fade-up" data-aos-duration="500">
+                            <img class="lazy" data-src="img/icons/delivery.svg" src="img/icons/delivery.svg"
+                                alt="delivery">
+                            <div class="text">
+                                <h5 class="services-title">free home delivery at your door steps</h5>
+                                <p class="services-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="menu" id="menu">
+            <div class="container">
+                <div class="menu_header">
+                    <h2 class="menu_header-title title title--section" data-aos="fade-up" data-aos-duration="500">Explore Our Foods</h2>
+                    <p class="menu_header-text" data-aos="fade-up" data-aos-duration="500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing
+                        cursus auctor eget sed phasellus senectus. Ut
+                        tellus donec vestibulum tristique leo bibendum in a, tincidunt. Volutpat metus id amet.</p>
+                </div>
+                <ul class="menu_list row gy-3 g-md-3 g-lg-4 g-xl-3">
+                    @@include('./components/_menu-card.html', {i:"1"})
+                    @@include('./components/_menu-card.html', {i:"2"})
+                    @@include('./components/_menu-card.html', {i:"3"})
+                    @@include('./components/_menu-card.html', {i:"4"})
+                    @@include('./components/_menu-card.html', {i:"5"})
+                    @@include('./components/_menu-card.html', {i:"6"})
+                </ul>
+            </div>
+        </section>
+        <section class="app" id="app">
+            <div class="container d-flex flex-wrap">
+                <div class="app_main col-12 col-lg-6 col-xl-5">
+                    <h2 class="app_main-title title title--section decorated">Download app for
+                        Exciting Deals</h2>
+                    <p class="app_main-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est, adipiscing cursus auctor eget sed
+                        phasellus senectus. Ut
+                        tellus donec vestibulum tristique leo bibendum in a, tincidunt.
+                    </p>
+                    <div class="app_main-links d-flex flex-wrap">
+                        <a class="app_main-links_link d-flex align-items-center" href="javascript:void(0)"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="icon-googleplay"></i>
+                            <span class="d-flex flex-column">
+                                <span class="secondary secondary--uppercase">get it on</span>
+                                <span class="source">google Play</span>
+                            </span>
+                        </a>
+                        <a class="app_main-links_link d-flex align-items-center" href="javascript:void(0)"
+                            target="_blank" rel="noopener noreferrer">
+                            <i class="icon-apple"></i>
+                            <span class="d-flex flex-column">
+                                <span class="secondary">Download on the</span>
+                                <span class="source">App Store</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="app_media col-12 col-lg-5 offset-lg-1 col-xl-6">
+                    <div class="app_media-wrapper">
+                        <picture>
+                            <source type="image/webp" data-srcset="img/content/app--sm.webp 300w,
+                                img/content/app--full.webp 992w" srcset="img/content/app--sm.webp 300w,
+                                img/contentapp--full.webp 992w" data-sizes="100w" sizes="100w" />
+                            <img class="app-img lazy"
+                                data-srcset="img/content/app--sm.jpg 300w, img/content/app--full.jpg 992w" srcset="img/content/menu_@@i--sm.jpg 300w,
+                                img/content/app--full.jpg 992w" data-src="img/content/app--sm.jpg"
+                                src="img/content/app--sm.jpg" alt="mobile app" data-sizes="100w" sizes="100w" />
+                        </picture>
+                        <picture>
+                            <source data-srcset="img/deco/salad.webp" srcset="img/deco/salad.webp" type="image/webp">
+                            <img class="salad lazy" data-src="img/deco/salad.png" src="img/deco/salad.png" alt="deco">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('./components/_footer.html')
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+// COLORS
+
+$ivory: #fff5ec;
+$powder: #ffedde;
+$gray: #707070;
+$blue: #2e266f;
+$shamrock: #35cd8c;
+$spandex: #31a24c;
+
+// FONT WEIGHTS
+
+$md: 500;
+$semi: 600;
+$bold: 700;
+$black: 900;
+
+// TITLE
+
+.title {
+    color: $blue;
+    text-transform: capitalize;
+    &--md {
+        font-weight: $md;
+    }
+    &--section {
+        font-weight: $md;
+        font-size: 28px;
+        &.decorated {
+            padding-left: 20px;
+            border-left: 12px solid $shamrock;
+        }
+    }
+    &--bold {
+        font-weight: $bold;
+    }
+}
+
+@media screen and (min-width: 575.98px) {
+    .title {
+        &--section {
+            font-size: 36px;
+            line-height: 62px;
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .title {
+        &--section {
+            font-size: 48px;
+        }
+    }
+}
+
+// SUBSCRIBE POPUP
+
+.subscribe {
+    &_popup {
+        border: 1px solid $spandex !important;
+        &-close {
+            box-shadow: none !important;
+            &:hover {
+                color: $spandex !important;
+            }
+        }
+    }
+}

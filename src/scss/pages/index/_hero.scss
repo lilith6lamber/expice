@@ -1,0 +1,313 @@
+.hero {
+    position: relative;
+    padding-bottom: 30px;
+    padding-top: 90px;
+    overflow: hidden;
+    .border {
+        width: 140px;
+        height: 100%;
+        position: absolute;
+        background: $shamrock;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+    .helper {
+        position: relative;
+        .dots {
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            left: 0;
+            top: 0;
+            @include dottedBg(5px, 20px, $ivory);
+            z-index: -1;
+        }
+    }
+    &_header {
+        &-food {
+            font-weight: $black;
+            font-size: 60px;
+            line-height: 90px;
+            text-transform: capitalize;
+            color: $blue;
+            opacity: 0.05;
+        }
+        &-title {
+            margin-bottom: 30px;
+        }
+        &-search {
+            margin-bottom: 50px;
+            width: calc(100% - 35px);
+            background: #fff;
+            padding: 5px 0;
+            &_field {
+                flex-grow: 1;
+                padding: 0 15px;
+                &:focus {
+                    &::placeholder {
+                        opacity: 0;
+                    }
+                }
+                &::placeholder {
+                    color: $blue;
+                    opacity: 0.6;
+                    transition: opacity 0.3s ease-in-out;
+                }
+            }
+            &_btn {
+                background: $shamrock;
+                border-radius: 60px 0px 0px 0px;
+                text-transform: uppercase;
+                color: #fff;
+                margin-right: 5px;
+                padding: 10px 20px;
+                font-weight: $semi;
+                font-size: 16px;
+                transition: border-radius 0.4s ease-in-out;
+                &:hover,
+                &:focus {
+                    border-radius: 0px;
+                }
+            }
+        }
+        &-label {
+            background-color: $shamrock;
+            border-radius: 0px 100px 100px 0px;
+            color: #fff;
+            max-width: 190px;
+            padding: 5px 0 5px 50px;
+            font-size: 18px;
+            margin-left: -50px;
+            i {
+                margin-right: 15px;
+            }
+        }
+    }
+    &_slider {
+        margin-right: 0;
+        &-slide {
+            .wrapper {
+                position: relative;
+                padding-left: 50px;
+                .lettuce {
+                    position: absolute;
+                    width: 70%;
+                    top: -50px;
+                    z-index: -1;
+                    left: 33%;
+                }
+                .dish {
+                    filter: drop-shadow(0 5px 15px rgba(#111, 0.3));
+                }
+            }
+        }
+        &-controls {
+            margin-top: 10px;
+            .slider-control {
+                color: #fff;
+                font-size: 34px;
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                transition: opacity 0.3s ease-in-out;
+                &:hover,
+                &:focus {
+                    opacity: 0.7;
+                }
+                &--prev {
+                    margin-right: 50px;
+                    &:after {
+                        left: 15px;
+                    }
+                }
+                &--next {
+                    &:after {
+                        right: 15px;
+                    }
+                }
+                &:before {
+                    content: "";
+                    width: 24px;
+                    height: 24px;
+                    border: 3px solid #ffffff;
+                    border-radius: 50%;
+                    display: block;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &:after {
+                    content: "";
+                    height: 3px;
+                    width: 30px;
+                    background-color: #fff;
+                    top: 16px;
+                }
+                &::before,
+                &::after {
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 575.98px) {
+    .hero {
+        .border {
+            width: 180px;
+        }
+        .wrapper {
+            .lettuce {
+                width: 65%;
+            }
+        }
+        &_header {
+            margin-bottom: 30px;
+            &-food {
+                font-size: 100px;
+                line-height: 150px;
+            }
+            &-title {
+                max-width: 344px;
+            }
+            &-search {
+                max-width: 462px;
+                width: 100%;
+                &_field {
+                    padding: 0 30px;
+                }
+                &_btn {
+                    padding: 10px 50px;
+                    font-size: 18px;
+                }
+            }
+            &-label {
+                max-width: 240px;
+                padding: 5px 0 5px 80px;
+                font-size: 18px;
+                margin-left: -80px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .hero {
+        .border {
+            width: 300px;
+        }
+        .helper {
+            .dots {
+                @include dottedBg(5px, 35px, $ivory);
+            }
+        }
+        &_header {
+            &-label {
+                max-width: 280px;
+                padding: 5px 0 5px 120px;
+                margin-left: -120px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .hero {
+        padding-bottom: 60px;
+        .border {
+            width: 250px;
+        }
+        .helper {
+            .dots {
+                @include dottedBg(5px, 35px, $ivory);
+            }
+        }
+        &_header {
+            margin-bottom: 0;
+            &-title {
+                font-size: 42px;
+                line-height: 50px;
+            }
+        }
+        &_slider {
+            margin-top: 100px;
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .hero {
+        padding-bottom: 200px;
+        .border {
+            width: 500px;
+        }
+        .helper {
+            .dots {
+                width: 39%;
+                @include dottedBg(5px, 35px, $ivory);
+            }
+        }
+        &_header {
+            &-title {
+                font-size: 42px;
+                line-height: 50px;
+            }
+            &-label {
+                position: relative;
+                width: auto;
+                display: inline-block;
+                padding: 5px 15px;
+                margin: 0;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 100%;
+                    width: 5000px;
+                    background: $shamrock;
+                    left: -4999px;
+                    top: 0;
+                }
+            }
+        }
+        &_slider {
+            margin-top: 200px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .hero {
+        padding-bottom: 200px;
+        .helper {
+            .dots {
+                width: 60%;
+                left: -30%;
+                @include dottedBg(5px, 50px, $ivory);
+            }
+        }
+        .border {
+            width: 40%;
+        }
+    }
+}
+
+// TRICK TO DISABLE IMG FLICKERING
+
+.tns-gallery > .tns-item {
+    position: absolute;
+    left: -100%;
+    -webkit-transition: transform 0s !important;
+    -moz-transition: transform 0s !important;
+    transition: transform 0s !important;
+}
+
+// HIDE AUTOPLAY BTN
+
+.tns-outer {
+    button[data-action="stop"],
+    button[data-action="start"] {
+        display: none;
+    }
+}

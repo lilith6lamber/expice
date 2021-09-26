@@ -1,0 +1,11 @@
+@import "../bootstrap/bootstrap-grid.css";
+@import "../fonts/icomoon/style.css";
+
+@import "base/variables";
+@import "base/mixins";
+@import 'global/loader';
+@import "global/global";
+
+@import 'blocks/header';
+@import 'pages/index';
+@import "blocks/footer";
