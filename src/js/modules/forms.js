@@ -55,7 +55,11 @@ export function preventSubmit() {
 
     submitBtns.forEach(el => {
         el.addEventListener('click', e => {
-            e.preventDefault();
+            if (!e.target.matches('.enabled')) {
+                e.preventDefault();
+            } else {
+                return false;
+            }
         })
     });
 }
